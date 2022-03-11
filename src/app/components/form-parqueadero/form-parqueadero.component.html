@@ -1,0 +1,23 @@
+<h3>Horario Militar</h3>
+
+<div>
+  <form>
+  <div class="mb-2">
+    <label  class="form-label">Hora de llegada</label>
+    <input type="number" class="form-control" id="horaLlegada" name="horaLlegada" [ngModel]="horaLlegada">
+    <label  class="form-label">Minutos de llegada</label>
+    <input type="number" class="form-control" id="minutosLlegada" name="minutosLlegada" [ngModel]="minutosLlegada">
+  </div>
+  <br>
+  <div class="mb-2">
+    <label  class="form-label">Hora de Salida</label>
+    <input type="number" class="form-control" id="horaSalida" name="horaSalida" [ngModel]="horaSalida">
+    <label  class="form-label">Minutos de Salida</label>
+    <input type="number" class="form-control" id="minutosSalida" name="minutosSalida" [ngModel]="minutosSalida">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="calcularCargos()">Calcular Cargos</button>
+    <br>
+
+  </form>
+</div>
+
