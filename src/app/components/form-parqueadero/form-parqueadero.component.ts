@@ -12,17 +12,14 @@ export class FormParqueaderoComponent  {
   horaSalida: number = 0;
   minutosSalida: number = 0;
   @Output() cargo = new EventEmitter<number>();
-  mensaje: string = "";
+
   horasAux : number = 0;
   contador: number = 2000;
 
 
   calcularCargos(){
 
-    this.horaLlegada = parseInt((<HTMLInputElement>document.getElementById("horaLlegada")).value)
-    this.minutosLlegada = parseInt((<HTMLInputElement>document.getElementById("minutosLlegada")).value)
-    this.horaSalida = parseInt((<HTMLInputElement>document.getElementById("horaSalida")).value)
-    this.minutosSalida = parseInt((<HTMLInputElement>document.getElementById("minutosSalida")).value)
+
 
     if(this.minutosLlegada>= 60 || this.minutosSalida>=60){
       this.cargo.emit(0)
@@ -67,14 +64,17 @@ export class FormParqueaderoComponent  {
       this.cargo.emit(this.contador);
 
     }
+
+
+    this.contador = 0;
+
+
+  }
+  limpiar(){
     this.horaLlegada = 0
     this.minutosLlegada = 0
     this.horaSalida = 0
     this.minutosSalida = 0
-    this.mensaje=""
-    this.contador = 0;
-
-
   }
 
 }
