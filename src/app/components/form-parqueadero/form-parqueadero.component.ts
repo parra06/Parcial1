@@ -27,7 +27,10 @@ export class FormParqueaderoComponent  {
     if(this.minutosLlegada>= 60 || this.minutosSalida>=60){
       this.cargo.emit(0)
 
-      this.mensaje="Ingrese bien los minutos";
+      alert("Ingrese bien los minutos")
+    }else if(this.horaLlegada>= 25 || this.horaSalida>=25){
+      this.cargo.emit(0)
+      alert("El dia solo tiene 24 horas")
     }else{
       if (this.minutosSalida > this.minutosLlegada){
         this.horaSalida+= 1;
@@ -56,6 +59,9 @@ export class FormParqueaderoComponent  {
         }else{
           this.contador+=500
         }
+      }
+      if (this.contador==12500){
+        this.contador = 10000;
       }
 
       this.cargo.emit(this.contador);
