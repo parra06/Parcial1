@@ -36,6 +36,7 @@ export class FormParqueaderoComponent  {
             this.horasAux=24;
           }else{
             this.horasAux = (24-this.horaLlegada)+this.horaSalida;
+            this.horaSalida= this.horaSalida-1;
           }
 
         }else{
@@ -65,11 +66,11 @@ export class FormParqueaderoComponent  {
 
     }
 
-    this.horaLlegada = 0
+    /*this.horaLlegada = 0
     this.minutosLlegada = 0
     this.horaSalida = 0
     this.minutosSalida = 0
-    this.contador = 0;
+    this.contador = 0;*/
 
 
   }
