@@ -65,7 +65,10 @@ export class FormParqueaderoComponent  {
 
     }
 
-
+    this.horaLlegada = 0
+    this.minutosLlegada = 0
+    this.horaSalida = 0
+    this.minutosSalida = 0
     this.contador = 0;
 
 
